@@ -10,7 +10,7 @@ package StepDefs;
 	@CucumberOptions(
 			dryRun=false,
 			features="src/test/java/feature",
-			plugin ={"pretty","html:target/html-cucumber.html","json:target/cucumber/report.json"},
+			plugin ={"pretty","html:target/html-cucumber","json:target/cucumber/report.json"},
 			glue="StepDefs",
 			tags= {"@smoke"}
 			)

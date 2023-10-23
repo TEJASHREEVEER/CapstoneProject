@@ -7,12 +7,9 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterTest;
+//import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
-import com.google.protobuf.Method;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -20,19 +17,17 @@ import io.cucumber.java.Before;
 public class Hooks {
 
 	public static WebDriver driver;
-	public ExtentReports report;
-	public ExtentTest test;
-
+	
 	@BeforeTest
-	public void ReportSetup() {
+	public void Setup() {
 
-		report = new ExtentReports("ExtendReport.html");
+		
 	}
 
 	@Before
-	public void setup(Method method) {
+	public void setup() {
 		
-		test = report.startTest(method.getName());
+		
 		ChromeOptions co = new ChromeOptions();
 		co.setBrowserVersion("115");
 		driver = new ChromeDriver(co);
@@ -62,15 +57,13 @@ public class Hooks {
 
 	@After
 	public void teardown() {
-		report.endTest(test);
+		
 		driver.quit();
 	}
 
-	@AfterTest
-	public void ReportClean() {
-		report.flush();
-		report.close();
+	
+	
 
 	}
 
-}
+

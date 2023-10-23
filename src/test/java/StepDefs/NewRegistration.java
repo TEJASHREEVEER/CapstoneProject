@@ -5,29 +5,25 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import junit.framework.Assert;
-import Pages.NewRegistrationPage;
-import StepDefs.Hooks;
 
-public class NewRegistration extends Hooks{
+import Pages.NewRegistrationPage;
+
+public class NewRegistration  {
 	WebDriver driver = Hooks.driver;
 	NewRegistrationPage rp;
 
-	
 	@Given("As a user navigate to Fly Away website on browser")
 	public void as_a_user_navigate_to_Fly_Away_website_on_browser() throws InterruptedException {
 		driver.get("http://localhost:8080/FlyAway/home");
 		driver.manage().window().maximize();
-		
+
 		Thread.sleep(3000);
 	}
 

@@ -1,14 +1,9 @@
 package Pages;
 
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
-import junit.framework.Assert;
-
-
-@SuppressWarnings("deprecation")
 public class CompleteBookingPage {
 	WebDriver driver;
 	By completeBookingBtn = By.xpath("//*[text()='Click to complete booking']");
@@ -23,7 +18,7 @@ public class CompleteBookingPage {
 		driver.findElement(completeBookingBtn).click();
 		return completeBookingBtn;
 	}
-	
+
 	public By getbookFlightBtn() {
 		driver.findElement(bookFlightBtn).click();
 		return bookFlightBtn;

@@ -7,7 +7,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import Pages.SignInPage;
 
-public class SignIn extends Hooks{
+public class SignIn{
 	WebDriver driver = Hooks.driver;
 	SignInPage lp;
 

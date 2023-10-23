@@ -10,12 +10,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-
-import junit.framework.Assert;
+import org.testng.Assert;
 
 import io.cucumber.core.cli.Main;
 
-@SuppressWarnings({ "deprecation", "unused" })
 public class SearchFlightPage {
 	WebDriver driver;
 

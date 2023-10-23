@@ -7,7 +7,7 @@ package StepDefs;
 	import io.cucumber.java.en.Then;
 	import Pages.BookFlightPage;
 
-	public class BookFlight extends Hooks {
+	public class BookFlight  {
 		WebDriver driver = Hooks.driver;
 		BookFlightPage bf;
 		

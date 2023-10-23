@@ -1,33 +1,27 @@
 package StepDefs;
 
+import org.openqa.selenium.WebDriver;
 
-	
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import Pages.CompleteBookingPage;
 
-	import org.openqa.selenium.WebDriver;
+public class CompleteBooking {
+	WebDriver driver = Hooks.driver;
+	CompleteBookingPage cb;
 
-	import io.cucumber.java.en.Given;
-	import io.cucumber.java.en.Then;
-	import Pages.CompleteBookingPage;
+	@Given("As a user click on complete booking button")
+	public void as_a_user_click_on_complete_booking_button() {
+		cb = new CompleteBookingPage(driver);
+		cb.getbookFlightBtn();
+		cb.getCompleteBookingBtn();
+	}
 
-	public class CompleteBooking extends Hooks {
-		WebDriver driver=Hooks.driver;
-		CompleteBookingPage cb;
-		
-		@Given("As a user click on complete booking button")
-		public void as_a_user_click_on_complete_booking_button() {
-			  cb = new CompleteBookingPage(driver);
-			  cb.getbookFlightBtn();
-			  cb.getCompleteBookingBtn();
-		}
-
-		@Then("validate title of the complete booking")
-		public void validate_title_of_the_complete_booking() {
-			cb = new CompleteBookingPage(driver);
-			cb.getSeeYourBookingsBtn();
-		    
-		}
-
-
+	@Then("validate title of the complete booking")
+	public void validate_title_of_the_complete_booking() {
+		cb = new CompleteBookingPage(driver);
+		cb.getSeeYourBookingsBtn();
 
 	}
 
+}

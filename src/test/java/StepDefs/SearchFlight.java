@@ -9,7 +9,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import Pages.SearchFlightPage;
 
-public class SearchFlight extends Hooks{
+public class SearchFlight {
 	WebDriver driver =Hooks.driver;
 	SearchFlightPage sf;
 	
